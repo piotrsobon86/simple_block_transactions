@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to_user_id: 1
+  to_user_address: MyString
+  from_address: MyString
+  currency: MyString
+  status: MyString
+  response: 
+
+two:
+  to_user_id: 1
+  to_user_address: MyString
+  from_address: MyString
+  currency: MyString
+  status: MyString
+  response: 

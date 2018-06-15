@@ -1,0 +1,33 @@
+%h1 Listing transactions
+
+%table.table
+  %thead
+    %tr
+      %th To user
+      %th To user address
+      %th From address
+      %th Currency
+      %th Amount
+      %th Status
+      %th Hash
+      %th
+      %th
+      %th
+
+  %tbody
+    - @transactions.each do |transaction|
+      %tr
+        %td= transaction.to_user_id
+        %td= transaction.to_user_address
+        %td= transaction.from_address
+        %td= transaction.currency
+        %td= transaction.amount
+        %td= transaction.status
+        %td= transaction&.response&.dig('tx', 'hash')
+        %td= link_to 'Show', transaction
+        %td= link_to 'Edit', edit_transaction_path(transaction)
+        %td= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Transaction', new_transaction_path

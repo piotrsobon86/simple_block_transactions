@@ -17,5 +17,6 @@ module Block
     # the framework and any gems in your application.
 
     config.eager_load_paths << Rails.root.join('lib')
+    config.eager_load_paths << Rails.root.join('app/services')
   end
 end

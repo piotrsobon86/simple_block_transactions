@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b To user:
+  = @transaction.to_user_id
+%p
+  %b To user address:
+  = @transaction.to_user_address
+%p
+  %b From address:
+  = @transaction.from_address
+%p
+  %b Currency:
+  = @transaction.currency
+%p
+  %b Status:
+  = @transaction.status
+%p
+  %b Response:
+  = @transaction.response
+
+= link_to 'Edit', edit_transaction_path(@transaction)
+\|
+= link_to 'Back', transactions_path

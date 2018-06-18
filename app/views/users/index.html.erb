@@ -8,8 +8,8 @@
       <th>Name</th>
       <th>Email</th>
       <th>Bitcoin address</th>
-      <th>Balance</th>
-      <th>Final Balance</th>
+      <th>Balance (BTC)</th>
+      <th>Final Balance (BTC)</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -20,8 +20,8 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.bitcoin_address %></td>
-        <td><%= user.balance %></td>
-        <td><%= user.final_balance %></td>
+        <td><%= user.balance(currency: 'btc') %></td>
+        <td><%= user.final_balance(currency: 'btc') %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Donate', new_donation_user_path(user) %></td>

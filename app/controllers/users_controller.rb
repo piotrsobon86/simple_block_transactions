@@ -54,8 +54,8 @@ class UsersController < ApplicationController
 
   def donate
     params = donation_params
-    response = @user.send_coins(amount: params[:amount].to_i, password: params[:admin_password])
-    redirect_to action: "index"
+    Transactions::Creator.new(user: @user, currency: 'btc', amount: params[:amount].to_i).perform
+    redirect_to action: 'index'
   end
 
   private
